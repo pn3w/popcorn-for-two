@@ -1,7 +1,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/+esm';
 
 /* =========================================================
-   ดูด้วยกัน — shared watch queue for two
+   Popcorn for Two — shared watch queue for two
    ========================================================= */
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -363,7 +363,7 @@ function renderSetup() {
   app.innerHTML = `
   <div class="center-wrap"><div class="panel">
     <div class="hero-mark">${ICON.mark}</div>
-    <h1>ดูด้วยกัน</h1>
+    <h1>Popcorn for Two</h1>
     <p class="muted">เชื่อมฐานข้อมูล Supabase เพื่อให้สองเครื่องเห็นคิวเดียวกัน</p>
     <ol>
       <li>สร้างโปรเจกต์ฟรีที่ <a href="https://supabase.com/dashboard" target="_blank" rel="noopener">supabase.com</a></li>
@@ -391,7 +391,7 @@ function renderAuth(note = '') {
   app.innerHTML = `
   <div class="center-wrap"><div class="panel">
     <div class="hero-mark">${ICON.mark}</div>
-    <h1>ดูด้วยกัน</h1>
+    <h1>Popcorn for Two</h1>
     <p class="muted">คิวหนังและซีรีส์ของเราสองคน</p>
     <form id="f-auth">
       <label class="field"><span>อีเมล</span><input type="email" name="email" required autocomplete="email"></label>
@@ -492,7 +492,7 @@ function renderMain() {
   <div class="shell">
     <header class="top">
       <div class="top-row">
-        <div class="brand">${ICON.mark}<div style="min-width:0"><b>ดูด้วยกัน</b><small>${esc(S.hh.name)}${S.db.kind === 'local' ? ' · เครื่องเดียว' : ''}</small></div></div>
+        <div class="brand">${ICON.mark}<div style="min-width:0"><b>Popcorn for Two</b><small>${esc(S.hh.name)}${S.db.kind === 'local' ? ' · เครื่องเดียว' : ''}</small></div></div>
         <div class="avatars">${S.members.map((m) => avatar(m.user_id)).join('')}</div>
         <button class="icon-btn" data-act="settings" aria-label="ตั้งค่า">${ICON.gear}</button>
       </div>
@@ -1081,7 +1081,7 @@ modalRoot.addEventListener('click', async (e) => {
     case 'graph': loadGraph().catch((err) => { $('#d-graph').innerHTML = `<div class="err">${esc(errMsg(err))}</div>`; }); break;
     case 'copy-invite': {
       const link = el.dataset.link;
-      if (navigator.share) { try { await navigator.share({ title: 'ดูด้วยกัน', text: `มาใช้ลิสต์ดูหนังด้วยกัน รหัสเชิญ ${S.hh.invite_code}`, url: link }); break; } catch { /* fall through to copy */ } }
+      if (navigator.share) { try { await navigator.share({ title: 'Popcorn for Two', text: `มาใช้ลิสต์ดูหนังด้วยกัน รหัสเชิญ ${S.hh.invite_code}`, url: link }); break; } catch { /* fall through to copy */ } }
       try { await navigator.clipboard.writeText(link); toast('คัดลอกลิงก์แล้ว'); } catch { prompt('คัดลอกลิงก์นี้', link); }
       break;
     }

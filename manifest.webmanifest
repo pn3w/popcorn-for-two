@@ -1,6 +1,6 @@
 {
-  "name": "ดูด้วยกัน",
-  "short_name": "ดูด้วยกัน",
+  "name": "Popcorn for Two",
+  "short_name": "Popcorn",
   "description": "คิวหนังและซีรีส์ที่ดูด้วยกันสองคน",
   "start_url": "./",
   "scope": "./",

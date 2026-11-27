@@ -1,4 +1,4 @@
--- ดูด้วยกัน (Watch Together) — Supabase schema
+-- Popcorn for Two — Supabase schema
 -- วิธีใช้: Supabase Dashboard → SQL Editor → New query → วางทั้งไฟล์ → Run (รันซ้ำได้)
 
 -- ---------- tables ----------
